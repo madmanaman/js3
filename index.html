@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change on Key Press</title>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border: 2px solid black;
+        }
+        .color-div {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div1"></div>
+
+<script>
+    
+    let colorGlobal = '';
+
+
+    function cambiarColorDiv(color) {
+        const div1 = document.getElementById('div1');
+        div1.style.backgroundColor = color;
+    }
+
+    function crearNuevoDiv(color) {
+        const nuevoDiv = document.createElement('div');
+        nuevoDiv.className = 'color-div';
+        nuevoDiv.style.backgroundColor = color;
+        document.body.appendChild(nuevoDiv);
+    }
+
+    document.addEventListener('keydown', function(event) {
+        switch(event.key) {
+            case 'a':
+                colorGlobal = 'pink';
+                cambiarColorDiv(colorGlobal);
+                break;
+            case 's':
+                colorGlobal = 'orange';
+                cambiarColorDiv(colorGlobal);
+                break;
+            case 'd':
+                colorGlobal = 'skyblue';
+                cambiarColorDiv(colorGlobal);
+                break;
+            case 'q':
+                crearNuevoDiv('purple');
+                break;
+            case 'w':
+                crearNuevoDiv('gray');
+                break;
+            case 'e':
+                crearNuevoDiv('brown');
+                break;
+            default:
+                break;
+        }
+    });
+</script>
+
+</body>
+</html>

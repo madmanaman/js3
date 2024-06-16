@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="caja1" style="width: 200px; height: 200px; background-color: blue;"></div>
+    <div id="caja2" style="width: 200px; height: 200px; background-color: red;"></div>
+    <div id="caja3" style="width: 200px; height: 200px; background-color: green;"></div>
+    <div id="caja4" style="width: 200px; height: 200px; background-color: yellow;"></div>
+
+    <script>
+        function cambiarColor(elemento, color = 'black') {
+            elemento.style.backgroundColor = color;
+        }
+
+        
+        const caja1 = document.getElementById("caja1");
+        const caja2 = document.getElementById("caja2");
+        const caja3 = document.getElementById("caja3");
+        const caja4 = document.getElementById("caja4");
+
+        
+        caja1.addEventListener('click', function() {
+            cambiarColor(this);
+        });
+
+        caja2.addEventListener('click', function() {
+            cambiarColor(this);
+        });
+
+        caja3.addEventListener('click', function() {
+            cambiarColor(this);
+        });
+
+        caja4.addEventListener('click', function() {
+            cambiarColor(this);
+        });
+    </script>
+</body>
+</html>
